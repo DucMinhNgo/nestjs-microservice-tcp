@@ -13,9 +13,12 @@ export class SubscriberService {
   ) { }
 
   async addSubscriber(subscriber: CreateSubscriberDto) {
-    const newSubscriber = await this.subscribersRepository.create(subscriber);
-    await this.subscribersRepository.save(newSubscriber);
-    return newSubscriber;
+    // const newSubscriber = await this.subscribersRepository.create(subscriber);
+    // await this.subscribersRepository.save(newSubscriber);
+    // return newSubscriber;
+    return {
+      message: 'Create is successful'
+    }
   }
 
   async getAllSubscribers() {
